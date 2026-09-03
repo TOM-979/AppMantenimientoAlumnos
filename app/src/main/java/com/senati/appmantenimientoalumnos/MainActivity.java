@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnCrear;
 
-
-public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,4 +78,4 @@ public class MainActivity extends AppCompatActivity {
     private void nuevoRegistro() {
         Intent intent = new Intent(this, NuevoActivity.class);
         startActivity(intent);
-    }
+    }}
