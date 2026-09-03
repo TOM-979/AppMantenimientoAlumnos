@@ -1,6 +1,5 @@
 package com.senati.appmantenimientoalumnos;
 
-import com.senati.appmantenimientoalumnos.db.alumnos;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.senati.appmantenimientoalumnos.db.Dbalumnos;
 
 public class NuevoActivity extends AppCompatActivity {
     //Asignar nuestras variables
@@ -35,8 +35,7 @@ public class NuevoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //cambiar el nombre de la clase alumnos por Dbalumnos
-                alumnos dbalumnos = new alumnos(NuevoActivity.this);
-
+                Dbalumnos dbalumnos = new Dbalumnos(NuevoActivity.this);
                 long id = dbalumnos.insertarContactos(txtnombre.getText().toString(), txtTelefono.getText().toString(), txtCorreoElectronico.getText().toString());
 
                 if(id > 0){
