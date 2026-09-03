@@ -1,5 +1,6 @@
 package com.senati.appmantenimientoalumnos;
 
+import com.senati.appmantenimientoalumnos.db.alumnos;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,12 +13,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.senati.appmantenimientoalumnos.db.Dbalumnos;
 
 public class NuevoActivity extends AppCompatActivity {
-    //Asignamos nuestras variables
+    //Asignar nuestras variables
     private EditText txtnombre, txtTelefono, txtCorreoElectronico;
-    private Button btnGuarda;
+    private Button btnguarda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,23 +29,20 @@ public class NuevoActivity extends AppCompatActivity {
         txtnombre = findViewById(R.id.txtNombre);
         txtTelefono = findViewById(R.id.txtTelefono);
         txtCorreoElectronico = findViewById(R.id.txtCorreoElectronico);
-        btnGuarda = findViewById(R.id.BtnGuarda);
+        btnguarda = findViewById(R.id.BtnGuarda);
 
-        btnGuarda.setOnClickListener(new View.OnClickListener() {
+        btnguarda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //cambiar el nombre de la clase alumnos por Dbalumnos
-                Dbalumnos dbalumnos = new Dbalumnos(NuevoActivity.this);
+                alumnos dbalumnos = new alumnos(NuevoActivity.this);
 
-                long id = dbalumnos.insertarContactos(
-                        txtnombre.getText().toString(),
-                        txtTelefono.getText().toString(),
-                        txtCorreoElectronico.getText().toString());
+                long id = dbalumnos.insertarContactos(txtnombre.getText().toString(), txtTelefono.getText().toString(), txtCorreoElectronico.getText().toString());
 
-                if (id > 0) {
+                if(id > 0){
                     Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
-                    Limpiar();
-                } else {
+                    limpiar();
+                }else{
                     Toast.makeText(NuevoActivity.this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
                 }
             }
@@ -58,7 +55,7 @@ public class NuevoActivity extends AppCompatActivity {
         });
     }
 
-    private void Limpiar() {
+    private void limpiar() {
         txtnombre.setText("");
         txtTelefono.setText("");
         txtCorreoElectronico.setText("");

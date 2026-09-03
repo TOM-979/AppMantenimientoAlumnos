@@ -38,6 +38,8 @@
         android:id="@+id/BtnGuarda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/btn_guardar"
         android:text="GUARDAR REGISTRO"
         android:textSize="24sp"/>
+
 </LinearLayout>
