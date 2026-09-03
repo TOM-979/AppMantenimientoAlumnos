@@ -21,10 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".NuevoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+=======
+>>>>>>> de8286146a64ec8242349189aca6436542f875f8
     </application>
 
 </manifest>

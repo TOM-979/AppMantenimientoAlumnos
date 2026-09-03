@@ -22,5 +22,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AppMantenimientoAlumnos"
 include(":app")
