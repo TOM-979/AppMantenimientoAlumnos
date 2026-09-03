@@ -1,12 +1,8 @@
 <resources>
-<<<<<<< HEAD
     <string name="app_name">SENATI 2025</string>
     <string name="hint_nombre">Nombre:</string>
     <string name="hint_telefono">Telefono:</string>
     <string name="hint_correo_electronico">Correo Electronico:</string>
     <string name="btn_guardar">Guardar Registro</string>
     <string name="menu_nuevo">Nuevo Registro</string>
-=======
-    <string name="app_name">appMantenimientoAlumnos</string>
->>>>>>> de8286146a64ec8242349189aca6436542f875f8
 </resources>
